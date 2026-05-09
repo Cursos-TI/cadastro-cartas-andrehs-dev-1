@@ -193,9 +193,89 @@ int main() {
         break;
 
         // PIB
+        case 3:
+
+        printf("\n### Comparação de Cartas ###\n");
+
+        printf("Atributo Comparação: PIB\n");
+
+        printf("-----------------------------------------\n");
+
+        printf("Carta 1: %s\n", nomeCidade1);
+        printf("PIB Carta 1: %.2f\n", pib1);
+
+        printf("Carta 2: %s\n", nomeCidade2);
+        printf("PIB Carta 2: %.2f\n", pib2); 
         
-    
+         if (pib1 > pib2){
+          printf("Carta 1 venceu\n");
+        }
+        else if(pib2 > pib1){
+          printf("Carta 2 venceu\n");
+        }
+        else {
+          printf("Empate!\n");
+        }
         
+        break;
+        
+        // Pontos Turisticos
+        case 4:
+
+        printf("\n### Comparação de Cartas ###\n");
+
+        printf("Atributo Comparação: PIB\n");
+
+        printf("-----------------------------------------\n");
+
+        printf("Carta 1: %s\n", nomeCidade1);
+        printf("Pontos Turisticos Carta 1: %.2f\n",pontosTuriticos1);
+
+        printf("Carta 2: %s\n", nomeCidade2);
+        printf("Pontos Turisticos 2: %.2f\n", pontosTuriticos2);
+
+        if (pontosTuriticos1 > pontosTuriticos2){
+          printf("Carta 1 venceu\n");
+        }
+        else if(pontosTuriticos2 > pontosTuriticos1){
+          printf("Carta 2 venceu\n");
+        }
+        else {
+          printf("Empate!\n");
+        }
+        break;
+
+        // Densidade Demográfica
+        case 5:
+
+        printf("\n### Comparação de Cartas ###\n");
+
+        printf("Atributo Comparação: PIB\n");
+
+        printf("-----------------------------------------\n");
+
+        printf("Carta 1: %s\n", nomeCidade1);
+        printf("Pontos Turisticos Carta 1: %.2f\n",densidade1);
+
+        printf("Carta 2: %s\n", nomeCidade2);
+        printf("Pontos Turisticos 2: %.2f\n", densidade2);
+
+        if (densidade1 > densidade2){
+          printf("Carta 1 venceu\n");
+        }
+        else if(densidade2 > densidade1){
+          printf("Carta 2 venceu\n");
+        }
+        else {
+          printf("Empate!\n");
+        }
+        break;
+
+        // Sair do Jogo
+        case 6:
+        
+        printf("Obrigado por jogar! Até a próxima!\n");
+
     }
 
 
