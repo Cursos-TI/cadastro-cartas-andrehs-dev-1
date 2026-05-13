@@ -19,14 +19,14 @@ int main() {
 
     // Variavel carta 1:
     int populacao1;
-    int pontosTuriticos1;
+    int pontosTuristicos1;
 
     float area1;
     float pib1;
 
     // Variavel carta 2:
     int populacao2;
-    int pontosTuriticos2;
+    int pontosTuristicos2;
 
     float area2;
     float pib2;
@@ -47,7 +47,7 @@ int main() {
     printf("Digite o PIB: ");
     scanf("%f", &pib1);
     printf("Digite os pontos turísticos: ");
-    scanf("%d", &pontosTuriticos1);
+    scanf("%d", &pontosTuristicos1);
 
   // Divisão
 
@@ -69,7 +69,7 @@ int main() {
     printf("Digite o PIB: ");
     scanf("%f", &pib2);
     printf("Digite os pontos turísticos: ");
-    scanf("%d", &pontosTuriticos2);
+    scanf("%d", &pontosTuristicos2);
 
     printf("\n------------------------------\n");
 
@@ -86,8 +86,8 @@ int main() {
     float superPoder1;
     float superPoder2; 
 
-    superPoder1 = populacao1 + area1 + pib1 + pontosTuriticos1 + PibPerCapta1 + (1 / densidade1);
-    superPoder2 = populacao2 + area2 + pib2 + pontosTuriticos2 + PibPerCapta2 + (1 / densidade2); 
+    superPoder1 = populacao1 + area1 + pib1 + pontosTuristicos1 + PibPerCapta1 + (1 / densidade1);
+    superPoder2 = populacao2 + area2 + pib2 + pontosTuristicos2 + PibPerCapta2 + (1 / densidade2); 
 
 
   // Resultado carta 1
@@ -99,7 +99,7 @@ int main() {
     printf("População: %d\n", populacao1);
     printf("Área: %.2f\n", area1);
     printf("PIB: %.2f\n", pib1);
-    printf("Pontos Turísticos: %d\n", pontosTuriticos1);
+    printf("Pontos Turísticos: %d\n", pontosTuristicos1);
     printf("Densidade Populacional: %2f\n", densidade1);
     printf("Valor PIB: %.2f\n", PibPerCapta1);
     printf("Super Poder: %.2f\n", superPoder1);
@@ -112,18 +112,148 @@ int main() {
     printf("População: %d\n", populacao2);
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
-    printf("Pontos Turísticos: %d\n", pontosTuriticos2);
+    printf("Pontos Turísticos: %d\n", pontosTuristicos2);
     printf("Densidade Populacional: %2f\n", densidade2);
     printf("Valor PIB: %.2f\n", PibPerCapta2);
     printf("Super Poder: %.2f\n", superPoder2);
 
     printf("\n------------------------------\n");
 
-    // Váriaves Menu Interativo
-    int escolhaJogador;
+    
+    // Dados já cadastrados das cartas
 
 
-    // Layout Menu Interátivo
+    int atributo1, atributo2;
+
+    float valor1Atributo1, valor2Atributo1;
+    float valor1Atributo2, valor2Atributo2;
+
+    float somaCarta1, somaCarta2;
+
+    // Escolha do primeiro atributo
+    printf("Escolha o primeiro atributo:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Densidade Demográfica\n");
+    printf("6. PIB per Capita\n");
+    printf("Opção: ");
+    scanf("%d", &atributo1);
+
+    // Escolha do segundo atributo com menu dinâmico
+    do {
+        printf("\nEscolha o segundo atributo:\n");
+
+        if (atributo1 != 1) printf("1. População\n");
+        if (atributo1 != 2) printf("2. Área\n");
+        if (atributo1 != 3) printf("3. PIB\n");
+        if (atributo1 != 4) printf("4. Pontos Turísticos\n");
+        if (atributo1 != 5) printf("5. Densidade Demográfica\n");
+        if (atributo1 != 6) printf("6. PIB per Capita\n");
+
+        printf("Opção: ");
+        scanf("%d", &atributo2);
+
+        if (atributo2 == atributo1) {
+            printf("Erro: escolha um atributo diferente.\n");
+        }
+
+    } while (atributo2 == atributo1);
+
+    // Valores do primeiro atributo
+    switch (atributo1) {
+        case 1:
+            valor1Atributo1 = populacao1;
+            valor2Atributo1 = populacao2;
+            break;
+        case 2:
+            valor1Atributo1 = area1;
+            valor2Atributo1 = area2;
+            break;
+        case 3:
+            valor1Atributo1 = pib1;
+            valor2Atributo1 = pib2;
+            break;
+        case 4:
+            valor1Atributo1 = pontosTuristicos1;
+            valor2Atributo1 = pontosTuristicos2;
+            break;
+        case 5:
+            valor1Atributo1 = densidade1;
+            valor2Atributo1 = densidade2;
+            break;
+        case 6:
+            valor1Atributo1 = PibPerCapta1;
+            valor2Atributo1 = PibPerCapta2;
+            break;
+    }
+
+    // Valores do segundo atributo
+    switch (atributo2) {
+        case 1:
+            valor1Atributo2 = populacao1;
+            valor2Atributo2 = populacao2;
+            break;
+        case 2:
+            valor1Atributo2 = area1;
+            valor2Atributo2 = area2;
+            break;
+        case 3:
+            valor1Atributo2 = pib1;
+            valor2Atributo2 = pib2;
+            break;
+        case 4:
+            valor1Atributo2 = pontosTuristicos1;
+            valor2Atributo2 = pontosTuristicos2;
+            break;
+        case 5:
+            valor1Atributo2 = densidade1;
+            valor2Atributo2 = densidade2;
+            break;
+        case 6:
+            valor1Atributo2 = PibPerCapta1;
+            valor2Atributo2 = PibPerCapta2;
+            break;
+    }
+
+    // Soma dos atributos
+    somaCarta1 = valor1Atributo1 + valor1Atributo2;
+    somaCarta2 = valor2Atributo1 + valor2Atributo2;
+
+    // Resultado
+    printf("\n--- Resultado da Comparação ---\n");
+    printf("Carta 1: %s\n", nomeCidade1);
+    printf("Carta 2: %s\n", nomeCidade2);
+
+    printf("\nAtributo 1:\n");
+    printf("%s: %.2f\n", nomeCidade1, valor1Atributo1);
+    printf("%s: %.2f\n", nomeCidade2, valor2Atributo1);
+
+    printf("\nAtributo 2:\n");
+    printf("%s: %.2f\n", nomeCidade1, valor1Atributo2);
+    printf("%s: %.2f\n", nomeCidade2, valor2Atributo2);
+
+    printf("\nSoma dos atributos:\n");
+    printf("%s: %.2f\n", nomeCidade1, somaCarta1);
+    printf("%s: %.2f\n", nomeCidade2, somaCarta2);
+
+    if (somaCarta1 > somaCarta2) {
+        printf("\nResultado: Carta 1 venceu!\n");
+    } else if (somaCarta2 > somaCarta1) {
+        printf("\nResultado: Carta 2 venceu!\n");
+    } else {
+        printf("\nResultado: Empate!\n");
+    }
+
+
+
+
+    /* Váriaves Menu Interativo
+    int escolhaJogador; */
+
+
+    /* Layout Menu Interátivo
     printf("### Comparação de Atributos ###\n");
 
     printf("Escolha uma das opções e compare os atributos das cartas!\n");
@@ -277,7 +407,7 @@ int main() {
         printf("Obrigado por jogar! Até a próxima!\n");
 
     }
-
+  */
 
    /* // Comparação cartas
     printf("\nComparação de Cartas:\n");
